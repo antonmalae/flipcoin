@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Брось монетку</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Брось монетку</h1>
+    <input type="text" id="or" placeholder="Введите значение для 'Орел'">
+    <input type="text" id="re" placeholder="Введите значение для 'Решка'">
+    <br>
+    <button onclick="flipCoin()">Бросить монетку</button>
+    <div id="coin-container">
+        <div id="coin">
+            <div class="side" id="heads">Орел</div>
+            <div class="side" id="tails">Решка</div>
+        </div>
+    </div>
+    <h2 id="result"></h2>
+    <p id="error-message" style="color: red;"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
