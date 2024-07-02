@@ -1,0 +1,36 @@
+// Импортируйте переменные Bootstrap, чтобы переопределить их позже
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+// Переопределите переменные Bootstrap
+$theme-colors: (
+  "primary": #008CBA,
+  "success": #4CAF50
+);
+
+// Импортируйте все стили Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Добавьте свои стили
+.custom-input {
+    input {
+        border-color: map-get($theme-colors, "success");
+        background-color: #F0FFF0;
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
+
+.custom-btn {
+    background-color: map-get($theme-colors, "primary");
+    border-color: darken(map-get($theme-colors, "primary"), 10%);
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken(map-get($theme-colors, "primary"), 10%);
+    }
+}

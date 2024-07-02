@@ -1,16 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
 }
 
-input {
-    margin: 10px;
+.custom-input input {
+    border-color: #4CAF50;  /* Зеленая граница */
+    background-color: #F0FFF0;  /* Слабо-зеленый фон */
+    border-radius: 10px;  /* Закругленные углы */
+    padding: 10px;
 }
 
-button {
+.custom-btn {
+    background-color: #008CBA;  /* Синяя кнопка */
+    border-color: #005F73;
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
     padding: 10px 20px;
-    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #005F73;  /* Темно-синяя кнопка при наведении */
 }
 
 #coin-container {

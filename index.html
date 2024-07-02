@@ -2,24 +2,35 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Брось монетку</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Брось монетку</h1>
-    <input type="text" id="or" placeholder="Введите значение для 'Орел'">
-    <input type="text" id="re" placeholder="Введите значение для 'Решка'">
-    <br>
-    <button onclick="flipCoin()">Бросить монетку</button>
-    <div id="coin-container">
-        <div id="coin">
-            <div class="side" id="heads">Орел</div>
-            <div class="side" id="tails">Решка</div>
+    <div class="container text-center mt-5">
+        <h1>Брось монетку</h1>
+        <div class="form-group custom-input">
+            <input type="text" id="or" class="form-control" placeholder="Введите значение для 'Орел'">
         </div>
+        <div class="form-group custom-input">
+            <input type="text" id="re" class="form-control" placeholder="Введите значение для 'Решка'">
+        </div>
+        <button class="btn custom-btn mb-3" onclick="flipCoin()">Бросить монетку</button>
+        <div id="coin-container" class="d-flex justify-content-center">
+            <div id="coin">
+                <div class="side" id="heads">Орел</div>
+                <div class="side" id="tails">Решка</div>
+            </div>
+        </div>
+        <h2 id="result"></h2>
+        <p id="error-message" class="text-danger"></p>
     </div>
-    <h2 id="result"></h2>
-    <p id="error-message" style="color: red;"></p>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
